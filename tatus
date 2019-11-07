@@ -1,0 +1,59 @@
+[33mcommit f7a2a341be7d1328842ad76c7392a93135de4d0b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Aline <aline.soares.2@hotmail.com>
+Date:   Tue Nov 5 22:12:03 2019 -0300
+
+    add body-parser
+
+[33mcommit 1b8b2bdf5e6388f0187d05d2dcf05f1beab744e9[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Tue Nov 5 18:38:06 2019 -0300
+
+    Adiciona metodos get e model do servidor
+
+[33mcommit af0c627b27bee522a1a0428ff31e25a49efdd98f[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Tue Nov 5 18:37:42 2019 -0300
+
+    Add scripts para rodar o servidor em desenvolvimento e default
+
+[33mcommit 0f4ec30f82857780026992b6f6356d125c6cb739[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Tue Nov 5 17:47:06 2019 -0300
+
+    Add estrutura basica do servidor do exercicio
+
+[33mcommit 1bcb0bfcc4d499c83f43a9eb529bf5378f901b01[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Tue Nov 5 14:59:28 2019 -0300
+
+    Update README.md
+
+[33mcommit 8c9bfd9004ea1aa5e36c44e5e64b293826e6c524[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Mon Nov 4 21:49:37 2019 -0300
+
+    Update README.md
+
+[33mcommit 2097c1ee4d55b31f4810ea1878792b343c657857[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Sun Nov 3 18:12:27 2019 -0300
+
+    Update README.md
+
+[33mcommit a99668a210465bfe29c52e4ea2bcf96158a417c0[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Sun Nov 3 17:33:22 2019 -0300
+
+    Add links para se aprofundar no que é HTTP
+
+[33mcommit bc9fb7a9bd6aae8753a82902e12cfa411578a870[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Sun Nov 3 17:25:24 2019 -0300
+
+    Update README.md
+
+[33mcommit 854d4c6a4785b5cc1844a4572f1d636528e4cdfc[m
+Author: Josélia L. Costa <joselialcosta@gmail.com>
+Date:   Sat Nov 2 22:39:34 2019 -0300
+
+    Initial commit
