@@ -9,12 +9,21 @@ const getAll = (request, response) => {
 
 const add = (request, response) => {
   let contato = request.body
- 
-  contato.id = Math.random().toString(36).substr(-8)
+  let baseDados = model.agenda.contatos
 
+  contato.id = Math.random().toString(36).substr(-8)
+// Salvar apenas contatos diferentes. Não queremos salvar contatos repetidos na nossa base de dados;
+
+  if (baseDados.find(dado => dado.nome === contato.nome)){
+    response.status(400).send("Contato já cadastrado")
+} else {
   model.agenda.contatos.push(contato)
-  response.status(200).send() //serve para colocar algo dentro do contatos.js
+  response.status(201).send(contato) //serve para colocar algo dentro do contatos.js
+ };
+   
 }
+
+
 
 
 module.exports = {
@@ -23,5 +32,5 @@ module.exports = {
   add
 }
 
-//Salvar apenas contatos diferentes. Não queremos salvar contatos repetidos na nossa base de dados;
+
 
