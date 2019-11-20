@@ -16,12 +16,16 @@ const ContatoSchema = new Schema({
         type: String,
         required: true,
     },
-    avatar: {
-        type: Buffer,
-        contentType: String,
+    dataNascimento : {
+        type: Date,
+        required: true,
+    },
+    fotoPerfil: {
+        type: String, // aqui vai a URL da foto
         required: false,
     }
-})
+   
+});
 
 const contatosCollection = mongoose.model('contato', ContatoSchema)
 

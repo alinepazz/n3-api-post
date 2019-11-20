@@ -29,6 +29,60 @@ const add = (request, response) => {
      return response.status(201).send(contato)
    }
  })
+}
+
+ const getByName = (request, response) => {
+   const nomeParam = request.params.nome 
+   //const filtro = { nome: nomeParam
+  const regex = new RegExp(nomeParam, "i")
+// const filtro = {nome: /^t/i}}
+   const filtro = {nome: regex} 
+   contatosCollection.find(filtro, (error, contatos) => {
+     if(error){
+       return response.status(500).send(error)
+     } else {
+       if(contatos.length > 0){
+        return response.status(200).send(contatos)
+       }else {
+         return response.status(404).send("Usuario nao encontrado")
+       }
+       //contato é um array
+       //const contatosFiltrados = contatos.filter(contato =>
+       //contato.nome === nomeParam)
+       //return response.status(200).send(contatosFiltrados)
+       
+     }
+   })
+ }
+
+ const getById = (request, response) => {
+   const idParam = request.params.id 
+   contatosCollection.findById(idParam, (error, contato) => {
+    if(error) {
+      return response.status(500).send(error)
+    } else{
+      //if(contato !== null && contato!== undefined)
+      if(contato) {
+        return response.status(200).send(contato)
+      } else {
+        return response.status(404).send('Contato nao encontrado')
+      }
+      
+    }
+   })
+ }
+
+ const deleteById = (request, response) =>{
+   const idParame = request.params.id 
+   contatosCollection.findByIdAndRemove(idParame,(error, contato) => {
+     if(error) {
+       return response.status(500).send(error)
+     } else {
+       return response.sendStatus(200)
+     }
+   })
+   
+ }
   //let contato = request.body
  
 
@@ -47,13 +101,18 @@ const add = (request, response) => {
   //   }
   // }
 
-}
+
 
 
   module.exports = {
     getAll,
-    // getById
-    add
+    add,
+    getByName,
+    getById,
+    deleteById
+    
+    
+    
   }
 
 
