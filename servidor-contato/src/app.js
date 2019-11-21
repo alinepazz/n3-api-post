@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+const bodyParser = require("body-parser")
 
 
 const database = require('./model/database')
@@ -17,7 +18,8 @@ app.use(function (request, response, next) {
   )
   next()
 })
-
+//middlewere
+app.use(bodyParser.json())
 app.use("/", index)
 app.use("/contatos", contatos)
 
